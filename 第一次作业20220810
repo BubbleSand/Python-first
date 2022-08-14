@@ -8,7 +8,7 @@ import random
 grade = 0   #得分初始化
 t = 0   #答对题数初始化
 c = 0   #控制循环次数
-while c<3:     #答题总数设为20
+while c<20:     #答题总数设为20
     c += 1
     Num1 = random.randint(0,100)        #乘法运算的第一个数
     Num2 = random.randint(0,100)        #乘法运算的第二个数
