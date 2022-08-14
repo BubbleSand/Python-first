@@ -1,0 +1,25 @@
+'''
+第一次大作业
+随机生成100以内的随机整数，生成一个两项的运算题目，由用户输入运算结果，判断答案是否正确。
+一共20道题，每题5分，给出最后的总分。
+例如：程序产生随机数生成题目 10X23= ，用户输入230，程序给出答案判断，计分，然后继续。
+'''
+import random
+grade = 0   #得分初始化
+t = 0   #答对题数初始化
+c = 0   #控制循环次数
+while c<3:     #答题总数设为20
+    c += 1
+    Num1 = random.randint(0,100)        #乘法运算的第一个数
+    Num2 = random.randint(0,100)        #乘法运算的第二个数
+    print('%.d*%.d=?' %(Num1,Num2))
+    Answer = int(input('请输入答案: '))   #必须输入整数
+    Correct_Answer = Num1 * Num2
+    if Answer == Correct_Answer:
+        print('正确！')
+        t += 1
+        grade += 5
+    else:
+        print('错误！')
+print('已经答了%d道题目，正确题目数量:%d' %(c,t))
+print('得分:%d' %grade)
